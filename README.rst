@@ -15,6 +15,8 @@ USAGE
 
 See main.py, but in brief:
 
+b.py::
+
   import main
   import sys
 
@@ -42,7 +44,8 @@ Most of the work, including:
 * Options will have default arguments.
 * The top-level mode will become unnecessary.
 * Non-option arguments will be respected.
-* Other suggestions welcome.
+* Param objects will support more information.
+* Cheese will be eaten.
 
 License
 =======

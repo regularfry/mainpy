@@ -20,12 +20,24 @@ b.py::
   import main
   import sys
 
-  m = main.mode("run", callback)
-  m.option("foo")
-  main.process(sys.argv)
-
   def callback(params):
     print "Called with " + params['foo'].value
+
+  m = main.mode("run", callback)
+  m.option("foo")
+  m.description="How not to be seen"
+  main.process(sys.argv)
+
+
+Called as::
+
+  $ python b.py
+
+Outputs::
+
+  Usage:
+    # How not to be seen
+          b.py  run --foo=<foo>
 
 Called as::
 
@@ -41,6 +53,7 @@ TODO
 
 Most of the work, including:
 
+* Errors will be caught and redirected to usage messages better
 * Options will have default arguments.
 * The top-level mode will become unnecessary.
 * Non-option arguments will be respected.
